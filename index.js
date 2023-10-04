@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookie());
 
 const corsOptions = {
-  origin: "https://expense-tracker-uha4.onrender.com",
+  origin: "http://localhost:5173",
   methods: "GET,POST,PUT,PATCH,DELETE",
   allowedHeaders: "Content-Type,Authorization",
   credentials: true,
