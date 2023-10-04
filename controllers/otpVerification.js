@@ -48,6 +48,7 @@ exports.verifyMngOtp = async (req, res) => {
     httpOnly: true,
     secure: true,
     maxAge: 15 * 24 * 60 * 60,
+    sameSite: "Lax",
   });
   return res.status(201).json({ results: manager });
 };
