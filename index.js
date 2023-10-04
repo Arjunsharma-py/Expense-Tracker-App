@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookie());
 
 const corsOptions = {
-  origin: "https://expense-tracker-client-theta.vercel.app/",
+  origin: "https://expense-tracker-client-theta.vercel.app",
   methods: "GET,POST,PUT,PATCH,DELETE",
   allowedHeaders: "Content-Type,Authorization",
   credentials: true,
