@@ -48,9 +48,8 @@ exports.verifyMngOtp = async (req, res) => {
     httpOnly: true,
     secure: true,
     maxAge: 15 * 24 * 60 * 60,
-    sameSite: "strict",
   });
-  return res.status(201).json({results: manager});
+  return res.status(201).json({ results: manager });
 };
 
 exports.verifyOrgOtp = async (req, res) => {
