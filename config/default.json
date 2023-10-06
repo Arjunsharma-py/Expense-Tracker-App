@@ -1,5 +1,5 @@
 {
-  "pass": "cpwgpflnpfdeboja",
+  "pass": "",
   "jwtPrivateKey": "",
-  "uri": "mongodb+srv://lalitsani5330:Dj4prmrYDnROWv1Y@expensetracker.uvwzppb.mongodb.net/expensetracker?retryWrites=true&w=majority"
+  "uri": ""
 }

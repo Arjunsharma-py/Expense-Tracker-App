@@ -1,3 +1,5 @@
 {
-  "jwtPrivateKey": "expense_jwtPrivateKey"
+  "pass": "gmail_password",
+  "jwtPrivateKey": "expense_jwtPrivateKey",
+  "uri": "mongodb_uri"
 }
