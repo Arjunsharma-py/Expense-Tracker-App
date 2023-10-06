@@ -3,8 +3,10 @@ const cache = require("node-cache");
 const otpCache = new cache({ stdTTL: 15 * 60 });
 
 const generateOTP = (userId) => {
+  let otp = 0;
   if (otpCache.has(userId)) otpCache.del(userId);
-  const otp = Math.floor(Math.random() * 1000000);
+  while (otp < 100000 || otp > 999999)
+    otp = Math.floor(Math.random() * 1000000);
   otpCache.set(userId, otp);
   return otp;
 };
