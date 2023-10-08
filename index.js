@@ -14,6 +14,7 @@ const authRoute = require("./routes/auth");
 const miniRoute = require("./routes/mini");
 
 const error = require("./middlewares/error");
+const frontend = config.get("frontendURL");
 
 if (!config.get("jwtPrivateKey")) {
   console.log("FATAL ERROR: jwtPrivateKey not provided...");
@@ -32,7 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookie());
 
 const corsOptions = {
-  origin: "https://expense-tracker-client-theta.vercel.app",
+  origin: frontend,
   methods: "GET,POST,PUT,PATCH,DELETE",
   allowedHeaders: "Content-Type,Authorization",
   credentials: true,

@@ -1,5 +1,6 @@
 {
   "pass": "",
   "jwtPrivateKey": "",
-  "uri": ""
+  "uri": "",
+  "frontendURL": ""
 }
