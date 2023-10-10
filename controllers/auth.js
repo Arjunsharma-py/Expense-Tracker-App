@@ -16,9 +16,7 @@ exports.login = async (req, res) => {
   if (!validPassword) return res.status(401).json({ error: "Wrong Password!" });
 
   if (!manager.isVerified)
-    return res
-      .status(402)
-      .json({ error: "You are not verified", email: manager.email });
+    return res.status(403).json({ error: "You are not verified" });
 
   const token = manager.generateAuthToken();
   res.cookie("x-auth-token", token, {
