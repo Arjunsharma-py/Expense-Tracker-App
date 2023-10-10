@@ -61,7 +61,10 @@ exports.joinOrg = async (req, res) => {
   const manager = await Manager.findById({ _id: req.user._id }).select(
     "_id name email"
   );
-  const admins = await Manager.find({ isAdmin: true }).select("email -_id");
+  const admins = await Manager.find({
+    isAdmin: true,
+    "org._id": org._id,
+  }).select("email -_id");
 
   if (!org || !manager || !admins)
     return res
